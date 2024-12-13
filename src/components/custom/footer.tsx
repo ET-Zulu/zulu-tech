@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import Logo from "./logo";
 
 export const Footer = () => {
   return (
@@ -6,43 +7,14 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Logo</h3>
+            <h3 className="text-xl font-bold mb-4">
+              <Logo />
+            </h3>
             <p className="text-gray-400 mb-4">
               Where to grow your business as a photographer: site or social
               media?
             </p>
             <div className="flex space-x-4">{/* Social media icons */}</div>
-          </div>
-
-          <div>
-            <h4 className="font-bold mb-4">Account</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  My Account
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Login / Register
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Cart
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Wishlist
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Shop
-                </a>
-              </li>
-            </ul>
           </div>
 
           <div>

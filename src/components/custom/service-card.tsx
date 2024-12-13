@@ -42,8 +42,19 @@ const services: ServiceCard[] = [
       "Ongoing maintenance and support services to ensure your applications stay updated, secure, and perform at their best.",
     icon: "🔧",
   },
+  {
+    title: "AI Solutions",
+    description:
+      "Innovative AI solutions tailored to your business needs, enhancing efficiency and decision-making through intelligent automation.",
+    icon: "🤖",
+  },
+  {
+    title: "LLM Development",
+    description:
+      "Custom large language model development services to create conversational agents and enhance user interactions on your platforms.",
+    icon: "📜",
+  },
 ];
-
 export const Services = () => {
   return (
     <section className=" bg-white cursor-pointer">

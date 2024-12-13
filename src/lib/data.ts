@@ -163,11 +163,11 @@ export const navItems = [
     link: "/about",
   },
   {
-    name: "Contact",
-    link: "/contact",
+    name: "Blog",
+    link: "/blog",
   },
   {
-    name: "Profile",
-    link: "/profile",
+    name: "Contact",
+    link: "/contact",
   },
 ];

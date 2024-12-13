@@ -5,23 +5,40 @@ import { SuccessStory } from "@/lib/types";
 
 const successStories: SuccessStory[] = [
   {
-    id: 1,
-    title: "Project 1",
-    description: "Engineered for personal portfolio",
-    image: "/project1.png",
-  },
-  {
     id: 2,
-    title: "Project 2",
-    description: "Designed for business growth",
+    title: "E-Commerce Platform for Trendy Boutique",
+    description:
+      "Designed for the Trendy Boutique, this e-commerce platform focuses on delivering an intuitive user experience that drives conversions. By utilizing strategic calls-to-action and seamless navigation, we helped the boutique increase their online engagement and sales. The integration of analytics tools allows for ongoing performance tracking, ensuring continuous improvement in customer satisfaction.",
     image: "/project2.png",
   },
   {
     id: 3,
-    title: "Project 3",
-    description: "Optimized for performance",
+    title: "Performance Optimization for Tech Solutions Inc.",
+    description:
+      "Optimized for performance, the Tech Solutions Inc. website underwent a comprehensive redesign to enhance speed and usability. We utilized modern web technologies to reduce load times and improve mobile responsiveness. The revamped site not only elevates user experience but also supports the company's growth by attracting more clients through better search engine visibility.",
     image: "/project3.png",
   },
+  {
+    id: 4,
+    title: "Brand Revitalization for Fresh Juice Co.",
+    description:
+      "This project involved a complete brand revitalization for Fresh Juice Co., including a new logo, packaging design, and website. Our approach focused on creating a vibrant and fresh aesthetic that reflects the health-conscious values of the brand. The new online presence has significantly increased customer engagement and loyalty, leading to a 30% boost in sales within the first quarter of launch.",
+    image: "/project4.png",
+  },
+  // {
+  //   id: 5,
+  //   title: "Mobile App Development for Fitness Tracker",
+  //   description:
+  //     "We developed a cutting-edge mobile app for a leading fitness tracker brand, focusing on user-friendly features that enhance workout experiences. The app includes personalized training plans, progress tracking, and social sharing capabilities. With a sleek design and intuitive navigation, the app has garnered positive reviews, resulting in a substantial increase in user downloads and active engagement.",
+  //   image: "/project5.png",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Digital Marketing Campaign for Eco-Friendly Products",
+  //   description:
+  //     "Executed a comprehensive digital marketing campaign for an eco-friendly products company aimed at increasing brand awareness and driving online sales. Utilizing social media, content marketing, and email campaigns, we crafted a narrative that resonates with environmentally conscious consumers. The campaign led to a remarkable 50% increase in website traffic and significantly boosted online sales during the promotional period.",
+  //   image: "/project6.png",
+  // },
 ];
 
 export const Success = () => {
@@ -61,8 +78,8 @@ export const Success = () => {
               <div className="aspect-square bg-gray-100 rounded-lg"></div>
             </div>
             <div className="mt-4">
-              <h3 className="text-xl font-bold">15,000+</h3>
-              <p className="text-gray-600">Active Laravel Projects</p>
+              <h3 className="text-xl font-bold">15+</h3>
+              <p className="text-gray-600">Active Projects</p>
             </div>
           </motion.div>
 
@@ -78,7 +95,7 @@ export const Success = () => {
                 className="p-4 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                  <div className=" bg-purple-100 p-8 rounded-full flex items-center justify-center">
                     <span className="text-2xl">💡</span>
                   </div>
                   <div>
