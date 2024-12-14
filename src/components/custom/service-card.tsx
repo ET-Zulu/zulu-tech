@@ -57,7 +57,7 @@ const services: ServiceCard[] = [
 ];
 export const Services = () => {
   return (
-    <section className=" bg-white cursor-pointer">
+    <section className=" bg-white dark:bg-[#05132e] cursor-pointer">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
@@ -86,7 +86,7 @@ export const Services = () => {
               whileHover={{ scale: 1.05, rotate: 2 }}
               className="h-full"
             >
-              <Card className="p-6 h-full hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+              <Card className="p-6 h-full dark:bg-[#0f2245] dark:border-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>

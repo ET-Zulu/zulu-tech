@@ -53,10 +53,10 @@ export const AboutUs = () => {
       <div
         className="relative w-full h-[500px] bg-[url(
 '/images/project_2.png')]
-             bg-cover bg-center opacity-50 z-0 flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600"
+             bg-cover bg-center z-0 flex items-center justify-center bg-blue-500 "
       >
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 "
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0 80%)" }}
         ></div>
         <div className="relative z-10 text-center">
@@ -83,7 +83,7 @@ export const AboutUs = () => {
         {/* Company Overview */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6 text-blue-800">Our Story</h2>
-          <p className="text-lg leading-7 text-gray-600">
+          <p className="text-lg leading-7 text-gray-600 dark:text-white">
             Zulu Tech was founded in 2015 with a vision to bring innovative
             solutions to the tech industry. What started as a small group of
             passionate developers has grown into a global company serving
@@ -99,12 +99,14 @@ export const AboutUs = () => {
             {achievements.map((achievement) => (
               <div
                 key={achievement.id}
-                className="p-6 bg-gray-100 shadow rounded-lg"
+                className="p-6 bg-gray-100 dark:text-white  dark:bg-[#05132e] shadow rounded-lg"
               >
-                <h3 className="text-2xl font-semibold mb-4">
+                <h3 className="text-2xl font-semibold mb-4 dark:bg-[#05132e]">
                   {achievement.title}
                 </h3>
-                <p className="text-gray-600">{achievement.description}</p>
+                <p className="text-gray-600 dark:text-white">
+                  {achievement.description}
+                </p>
               </div>
             ))}
           </div>
@@ -119,7 +121,7 @@ export const AboutUs = () => {
             {teamMembers.map((member) => (
               <div
                 key={member.id}
-                className="bg-gray-100 shadow rounded-lg p-6 text-center"
+                className="bg-gray-100  dark:text-white dark:bg-[#05132e] shadow rounded-lg p-6 text-center"
               >
                 <Image
                   src={member.image}
@@ -129,7 +131,7 @@ export const AboutUs = () => {
                   className="rounded-full mx-auto mb-4"
                 />
                 <h3 className="text-lg font-semibold">{member.name}</h3>
-                <p className="text-gray-500">{member.role}</p>
+                <p className="text-gray-500 dark:text-white">{member.role}</p>
               </div>
             ))}
           </div>
@@ -137,15 +139,15 @@ export const AboutUs = () => {
 
         {/* Vision and Mission */}
         <section>
-          <h2 className="text-3xl font-bold mb-6 text-blue-800">
+          <h2 className="text-3xl font-bold mb-6 text-blue-800 dark:text-white">
             Our Vision & Mission
           </h2>
-          <p className="text-lg leading-7 text-gray-600 mb-4">
+          <p className="text-lg leading-7 text-gray-600 mb-4 dark:text-white">
             Our vision is to become a global leader in providing technology
             solutions that drive transformation and success for businesses of
             all sizes.
           </p>
-          <p className="text-lg leading-7 text-gray-600">
+          <p className="text-lg leading-7 text-gray-600 dark:text-white">
             Our mission is to deliver exceptional value to our clients through
             innovative solutions, dedicated support, and an unwavering
             commitment to quality.

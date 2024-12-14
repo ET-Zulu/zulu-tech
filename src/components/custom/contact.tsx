@@ -62,7 +62,7 @@ export default function ContactPage() {
                     placeholder="Go ahead, we are listening..."
                     className="bg-[#F4F4FE] border-0 min-h-[120px] resize-none"
                   />
-                  <Button className="w-full bg-blue-500 hover:bg-[#6366F1] py-5">
+                  <Button className="w-full bg-blue-500 hover:bg-[#6366F1] py-5 text-white">
                     Submit
                   </Button>
                 </form>
@@ -79,17 +79,23 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-4 text-gray-600">
-                  <div className="flex items-center gap-4">
+                  {/* <div className="flex items-center gap-4">
                     <div className="w-8 h-8 rounded-full bg-[#F4F4FE] flex items-center justify-center">
                       <span className="text-[#7B7FF6]">📍</span>
                     </div>
                     22 Bole Denber Building
+                  </div> */}
+                  <div className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#F4F4FE] flex items-center justify-center">
+                      <span className="text-[#7B7FF6]">📞</span>
+                    </div>
+                    +251-912-323811
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-8 h-8 rounded-full bg-[#F4F4FE] flex items-center justify-center">
                       <span className="text-[#7B7FF6]">📞</span>
                     </div>
-                    011-225-3468
+                    +251-73350968
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-8 h-8 rounded-full bg-[#F4F4FE] flex items-center justify-center">

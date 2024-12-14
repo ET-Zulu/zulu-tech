@@ -43,7 +43,7 @@ export const Testimonials = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:text-white dark:bg-[#05132e]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -66,7 +66,7 @@ export const Testimonials = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="p-6 h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="p-6 h-full hover:shadow-lg transition-shadow duration-300 dark:bg-[#032157] dark:text-white">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
                     <img
@@ -77,7 +77,9 @@ export const Testimonials = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-600">{testimonial.role}</p>
+                    <p className="text-gray-600 dark:text-white">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
                 <div className="flex mb-4">
@@ -87,7 +89,9 @@ export const Testimonials = () => {
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-600">{testimonial.comment}</p>
+                <p className="text-gray-600 dark:text-white">
+                  {testimonial.comment}
+                </p>
               </Card>
             </motion.div>
           ))}

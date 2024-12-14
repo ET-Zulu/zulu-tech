@@ -17,7 +17,7 @@ export const Stats = () => {
   });
 
   return (
-    <section className="bg-white py-20" ref={ref}>
+    <section className="bg-white dark:bg-[#05132e] py-20" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

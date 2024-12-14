@@ -38,9 +38,6 @@ export default function LandingPage() {
         <Features />
       </div>
       <div data-aos="flip-left">
-        <Trial />
-      </div>
-      <div data-aos="fade-up">
         <TestimonialsSection />
       </div>
     </div>

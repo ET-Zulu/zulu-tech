@@ -7,7 +7,7 @@ import AnimatedLogoCloud from "./animated-testimonial";
 
 const HeroCustom = () => {
   return (
-    <section className="relative bg-white text-gray-800 py-16 md:py-24 lg:py-32 pb-0">
+    <section className="relative bg-white dark:bg-[#05132e] dark:text-white  text-gray-800 py-16 md:py-24 lg:py-32 pb-0">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center">
         <div className="lg:w-1/2 space-y-6">
           <motion.h1
@@ -32,7 +32,7 @@ const HeroCustom = () => {
         </div>
         <motion.div className="lg:w-1/2 flex justify-center relative">
           <Image
-            src={"/images/web.avif"}
+            src={"/images/web-bg.png"}
             alt="Hero Illustration"
             width={600}
             height={400}

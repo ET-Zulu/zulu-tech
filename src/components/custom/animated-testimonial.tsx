@@ -53,7 +53,7 @@ const logos = [
   },
   {
     name: "AWS",
-    url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    url: "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
   },
   {
     name: "Vue.js",
@@ -103,7 +103,7 @@ const AnimatedLogoCloud = () => {
                   <img
                     key={key}
                     src={logo.url}
-                    className="h-10 w-28 px-2 brightness-0  dark:invert"
+                    className="h-10 w-28 px-2 "
                     alt={`${logo.name}`}
                   />
                 ))}

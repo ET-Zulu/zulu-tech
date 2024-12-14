@@ -43,7 +43,7 @@ const successStories: SuccessStory[] = [
 
 export const Success = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:bg-[#05132e]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -68,14 +68,12 @@ export const Success = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-lg p-6 shadow-lg"
+            className="bg-white dark:bg-[#0b224d] rounded-lg p-6 shadow-lg"
           >
             <div className="grid grid-cols-2 gap-4">
               {/* Project Screenshots */}
-              <div className="aspect-square bg-gray-100 rounded-lg"></div>
-              <div className="aspect-square bg-gray-100 rounded-lg"></div>
-              <div className="aspect-square bg-gray-100 rounded-lg"></div>
-              <div className="aspect-square bg-gray-100 rounded-lg"></div>
+              <div className="aspect-square bg-gray-100 dark:bg-[#05132e] rounded-lg"></div>
+              <div className="aspect-square bg-gray-100 dark:bg-[#05132e] rounded-lg"></div>
             </div>
             <div className="mt-4">
               <h3 className="text-xl font-bold">15+</h3>
@@ -92,7 +90,7 @@ export const Success = () => {
             {successStories.map((story) => (
               <Card
                 key={story.id}
-                className="p-4 hover:shadow-lg transition-shadow duration-300"
+                className="p-4 hover:shadow-lg transition-shadow duration-300 dark:bg-[#05132e] dark:border-gray-400"
               >
                 <div className="flex items-center gap-4">
                   <div className=" bg-purple-100 p-8 rounded-full flex items-center justify-center">
