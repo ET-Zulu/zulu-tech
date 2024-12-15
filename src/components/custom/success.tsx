@@ -92,7 +92,7 @@ export const Success = () => {
                 key={story.id}
                 className="p-4 hover:shadow-lg transition-shadow duration-300 dark:bg-[#05132e] dark:border-gray-400"
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 max-sm:flex-col">
                   <div className=" bg-purple-100 p-8 rounded-full flex items-center justify-center">
                     <span className="text-2xl">💡</span>
                   </div>

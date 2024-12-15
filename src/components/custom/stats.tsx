@@ -17,23 +17,23 @@ export const Stats = () => {
   });
 
   return (
-    <section className="bg-white dark:bg-[#05132e] py-20" ref={ref}>
+    <section className="bg-white dark:bg-[#05132e] py-20 max-w-full">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          // initial={{ opacity: 0, y: 20 }}
+          // animate={inView ? { opacity: 1, y: 0 } : {}}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
           {stats.map((stat, index) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: index * 0.1 }}
+              // initial={{ opacity: 0, y: 20 }}
+              // animate={inView ? { opacity: 1, y: 0 } : {}}
+              // transition={{ delay: index * 0.1 }}
             >
               <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               <div className="text-gray-600">{stat.label}</div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
       </div>
