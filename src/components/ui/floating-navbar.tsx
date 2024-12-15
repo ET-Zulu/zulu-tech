@@ -51,7 +51,7 @@ export const FloatingNav = ({
                     "block px-4 py-2 rounded-md text-lg transition-all",
                     pathname === navItem.link
                       ? "bg-black text-white dark:bg-white dark:text-black"
-                      : "text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
+                      : "text-black hover:bg-gray-100 dark:text-white  dark:hover:bg-gray-800"
                   )}
                 >
                   {navItem.name}
@@ -81,7 +81,7 @@ export const FloatingNav = ({
                 "relative items-center flex space-x-1 text-sm  px-4 py-2 rounded-full transition-all",
                 "hover:text-black hover:dark:text-white hover:border dark:hover:border-white/[0.2] border-transparent",
                 pathname === navItem.link
-                  ? "text-black dark:text-white border dark:border-white/[0.2]"
+                  ? "text-black dark:text-white border border-gray-400 dark:border-white/[0.2]"
                   : "text-neutral-600 dark:text-neutral-50"
               )}
             >
