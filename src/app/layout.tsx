@@ -41,7 +41,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="z-[10000] fixed flex justify-between px-10 items-center   bg-inherit w-full h-24">
+          <div className="z-[70] fixed flex justify-between px-10 items-center   bg-inherit w-full h-24">
             <Logo />
             <FloatingNav navItems={navItems} />
 

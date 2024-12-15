@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Logo from "./logo";
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Linkedin, Twitter, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -25,6 +25,9 @@ export const Footer = () => {
               </Link>
               <Link href="#" className="block text-white hover:text-gray-200">
                 <Linkedin className="w-6 h-6" />
+              </Link>
+              <Link href="#" className="block text-white hover:text-gray-200">
+                <Mail className="w-6 h-6" />
               </Link>
             </div>
           </div>
