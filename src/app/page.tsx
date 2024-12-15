@@ -1,13 +1,9 @@
-import Hero from "@/components/sections/hero"
-import Features from "@/components/sections/Features"
-import TestimonialsSection from "@/components/sections/testimonials-section"
+import LandingPage from "@/components/sections/page";
 
-export default function LandingPage() {
+export default function Page() {
   return (
-    <div className="flex flex-col gap-y-12">
-      <Hero />
-      <Features />
-      <TestimonialsSection />
+    <div>
+      <LandingPage />
     </div>
-  )
+  );
 }

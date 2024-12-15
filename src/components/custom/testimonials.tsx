@@ -1,83 +1,102 @@
-"use client";
-import Image from "next/image";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-interface Testimonial {
-  image: string;
-  name: string;
-  jobtitle: string;
-  text: string;
-  rating: number;
-}
+import { Card } from "@/components/ui/card";
+import { TestimonialType } from "@/lib/types";
 
-interface TestimonialProps {
-  testimonials: Testimonial[];
-  mode?: string;
-}
+const testimonials: TestimonialType[] = [
+  {
+    id: 1,
+    name: "Client Name 1",
+    role: "CEO",
+    comment: "Best of the best! Great experience working with this team.",
+    rating: 5,
+    image: "/avatar1.png",
+  },
+  {
+    id: 2,
+    name: "Client Name 2",
+    role: "Marketing Director",
+    comment: "Their attention to detail and customer service is unmatched.",
+    rating: 4,
+    image: "/avatar2.png",
+  },
+  {
+    id: 3,
+    name: "Client Name 3",
+    role: "Product Manager",
+    comment: "Absolutely fantastic! They exceeded our expectations.",
+    rating: 5,
+    image: "/avatar3.png",
+  },
+  {
+    id: 4,
+    name: "Client Name 4",
+    role: "Business Analyst",
+    comment: "A great partner for our projects. Highly recommend!",
+    rating: 4,
+    image: "/avatar4.png",
+  },
+];
 
-export default function StarRatingTestimonial({
-  testimonials,
-  mode = "dark",
-}: TestimonialProps) {
-  const maxDisplayedTestimonials = 6;
+export const Testimonials = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
 
   return (
-    <div className="mx-4">
-      <h1 className="text-3xl md:text-4xl text-center font-bold dark:text-white mb-8">
-        Read What Others Say About Us
-      </h1>
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-5 justify-center items-stretch"
+    <section className="py-20 bg-gray-50 dark:text-white dark:bg-[#05132e]">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          {testimonials
-            .slice(0, maxDisplayedTestimonials)
-            .map((testimonial, index) => (
-              <div
-                key={index}
-                className={`${
-                  mode === "dark" ? "bg-black" : "bg-white"
-                } border border-slate-400 w-full h-full rounded-2xl p-5 relative flex flex-col`}
-              >
-                <div className="flex-grow mb-5">
-                  <span
-                    className={`${
-                      mode === "dark" ? "text-slate-100" : "text-black"
-                    }`}
-                  >
-                    {testimonial.text}
-                  </span>
-                </div>
-                <hr className="mb-5" />
-                <div className="flex items-center mt-auto">
-                  <Image
-                    src={
-                      testimonial.image ||
-                      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    }
-                    alt="profile"
-                    width={50}
-                    height={50}
-                    className="rounded-full w-12 h-12 object-cover"
-                  />
-                  <div className="flex flex-col pl-4">
-                    <span
-                      className={`${
-                        mode === "dark" ? "text-white" : "text-black"
-                      }`}
-                    >
-                      {testimonial.name}
-                    </span>
-                    <span
-                      className={`text-sm ${
-                        mode === "dark" ? "text-slate-400" : "text-slate-500"
-                      }`}
-                    >
-                      {testimonial.jobtitle}
-                    </span>
+          <h2 className="text-3xl font-bold mb-4">Customer Testimonial</h2>
+          <p className="text-gray-600">
+            Our Customers Think, Our Greatest Asset
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 items-center justify-center content-center md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={testimonial.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <Card className="p-6 h-full hover:shadow-lg transition-shadow duration-300 dark:bg-[#032157] dark:text-white">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">{testimonial.name}</h4>
+                    <p className="text-gray-600 dark:text-white">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="text-yellow-400">
+                      ★
+                    </span>
+                  ))}
+                </div>
+                <p className="text-gray-600 dark:text-white">
+                  {testimonial.comment}
+                </p>
+              </Card>
+            </motion.div>
+          ))}
         </div>
-    </div>
+      </div>
+    </section>
   );
-}
+};

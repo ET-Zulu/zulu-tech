@@ -1,14 +1,16 @@
-'use client'
+"use client";
 
 import { testimonials } from "@/lib/data";
-import StarRatingTestimonial from "../custom/testimonials";
+// import StarRatingTestimonial from "../custom/testimonials";
 import { useTheme } from "next-themes";
+import { Testimonials } from "../custom/testimonials";
 
 export default function TestimonialsSection() {
   const { theme } = useTheme();
   return (
     <div>
-      <StarRatingTestimonial mode={theme} testimonials={testimonials}/>
+      <Testimonials />
+      {/* <StarRatingTestimonial mode={theme} testimonials={testimonials} /> */}
     </div>
-  )
+  );
 }
