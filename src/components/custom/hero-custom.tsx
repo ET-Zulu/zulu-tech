@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import AnimatedLogoCloud from "./animated-testimonial";
+import AnimatedLogoCloud from "./animated-icons";
 // import heroImage from "@/public/images/hero-illustration.png";
 
 const HeroCustom = () => {
@@ -21,7 +21,7 @@ const HeroCustom = () => {
           <p className="text-lg md:text-xl mt-4">
             Achieving your project goals with precision and timely delivery.
           </p>
-          <div className="mt-8 flex space-x-4">
+          <div className="mt-8 flex  max-sm:flex-col gap-2 max-sm:justify-center items-stretch">
             <button className="px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg hover:bg-blue-500 transition">
               Bring Your Idea to Life
             </button>

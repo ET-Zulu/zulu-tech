@@ -41,13 +41,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <FloatingNav navItems={navItems} />
-
-          <div className="right-4 top-3 z-10 fixed max-sm:top-0 max">
-            <ThemeToggle />
-          </div>
-          <div className="left-4 top-0 z-10 fixed max-sm:hidden">
+          <div className="z-[70] fixed flex justify-between px-10 items-center   bg-inherit w-full h-24">
             <Logo />
+            <FloatingNav navItems={navItems} />
+
+            <ThemeToggle />
           </div>
           {children}
         </ThemeProvider>

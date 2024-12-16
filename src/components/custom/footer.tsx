@@ -1,56 +1,35 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 import Logo from "./logo";
+import { Facebook, Linkedin, Twitter, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="flex justify-between items-center">
           <div>
-            <h3 className="text-xl font-bold mb-4">
+            <h3 className="text-xl font-bold ">
               <Logo />
             </h3>
-            <p className="text-gray-400 mb-4">
-              Where to grow your business as a photographer: site or social
-              media?
-            </p>
+            <p className="text-gray-400 mb-4">Turning Vision into Reality,</p>
             <div className="flex space-x-4">{/* Social media icons */}</div>
           </div>
-
           <div>
-            <h4 className="font-bold mb-4">Quick Link</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Terms Of Use
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold mb-4">Our Newsletter</h4>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter to get updates.
-            </p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Email address"
-                className="bg-gray-800 px-4 py-2 rounded-lg flex-grow"
-              />
-              <Button variant="secondary">Send</Button>
-            </form>
+            <div className=" flex gap-5">
+              <Link href="#" className="block text-white hover:text-gray-200">
+                <Facebook className="w-6 h-6" />
+              </Link>
+              <Link href="#" className="block text-white hover:text-gray-200">
+                <Twitter className="w-6 h-6" />
+              </Link>
+              <Link href="#" className="block text-white hover:text-gray-200">
+                <Linkedin className="w-6 h-6" />
+              </Link>
+              <Link href="#" className="block text-white hover:text-gray-200">
+                <Mail className="w-6 h-6" />
+              </Link>
+            </div>
           </div>
         </div>
 
