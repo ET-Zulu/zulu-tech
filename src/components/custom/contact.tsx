@@ -150,8 +150,9 @@ export default function ContactPage() {
                   <Image
                     src="/images/contact-us.avif"
                     alt="Contact illustration"
-                    fill
                     className="object-contain"
+                    width={400}
+                    height={400}
                   />
                 </div>
 

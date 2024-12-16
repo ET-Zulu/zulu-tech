@@ -84,10 +84,12 @@ export const BlogsPage = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="relative h-48">
-                <img
+                <Image
                   src={blog.image}
                   alt={blog.title}
-                  className="object-cover h-52 w-full"
+                  className="h-52 w-full object-cover"
+                  width={400}
+                  height={400}
                 />
               </div>
               <div className="p-6">
