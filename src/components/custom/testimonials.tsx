@@ -8,11 +8,11 @@ import Image from "next/image";
 const testimonials: TestimonialType[] = [
   {
     id: 1,
-    name: "Client Name 1",
-    role: "CEO",
-    comment: "Best of the best! Great experience working with this team.",
+    name: "Joshua Akinsola",
+    role: "CEO, Kaadi",
+    comment: "Great working with the team, They treat the project like it's their own, a real pleasure to work with!",
     rating: 5,
-    image: "/avatar1.png",
+    image: "/avatar1.jpg",
   },
   {
     id: 2,
@@ -93,7 +93,7 @@ export const Testimonials = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 dark:text-white">
-                  {testimonial.comment}
+                  "{testimonial.comment}"
                 </p>
               </Card>
             </motion.div>
