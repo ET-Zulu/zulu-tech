@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import Logo from "./logo";
 import { Facebook, Linkedin, Twitter, Mail } from "lucide-react";
+import { FaLinkedin, FaTiktok, FaInstagram } from "react-icons/fa";
+
 
 export const Footer = () => {
   return (
@@ -17,17 +19,18 @@ export const Footer = () => {
           </div>
           <div>
             <div className=" flex gap-5">
-              <Link href="#" className="block text-white hover:text-gray-200">
-                <Facebook className="w-6 h-6" />
+
+              <Link href="https://www.linkedin.com/company/zulu-software/" target="_blank"
+                rel="noopener noreferrer" className="block text-white hover:text-gray-200">
+                <FaLinkedin className="w-6 h-6" />
               </Link>
-              <Link href="#" className="block text-white hover:text-gray-200">
-                <Twitter className="w-6 h-6" />
+              <Link href="https://www.tiktok.com/@zulu_tech?_t=8sJIKXbjuI2&_r=1" target="_blank"
+                rel="noopener noreferrer" className="block text-white hover:text-gray-200">
+                <FaTiktok className="w-6 h-6" />
               </Link>
-              <Link href="#" className="block text-white hover:text-gray-200">
-                <Linkedin className="w-6 h-6" />
-              </Link>
-              <Link href="#" className="block text-white hover:text-gray-200">
-                <Mail className="w-6 h-6" />
+              <Link href="https://www.instagram.com/zulutech_/profilecard/?igsh=MXhkOW02ejNpZnRicQ==" target="_blank"
+                rel="noopener noreferrer" className="block text-white hover:text-gray-200">
+                <FaInstagram className="w-6 h-6" />
               </Link>
             </div>
           </div>
