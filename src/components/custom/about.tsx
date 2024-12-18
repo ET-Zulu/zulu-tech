@@ -2,25 +2,29 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 
 const teamMembers = [
   {
     id: 1,
-    name: "Ketema G",
+    name: "Ketema G.",
     role: "CEO & Founder",
     image: "/images/ketema.jpg",
+    fallback: "KG",
   },
   {
     id: 2,
     name: "Tesfaye A.",
     role: "Chief Technology Officer",
     image: "/images/tesfish.jpg",
+    fallback: "TA",
   },
   {
     id: 3,
-    name: "Admas G",
-    role: "Senior Dev",
-    image: "/team-placeholder-3.png",
+    name: "Admas G.",
+    role: "Chief Operating Officer",
+    image: "/images/admas_portrait.jpg",
+    fallback: "AG",
   },
 ];
 
@@ -121,15 +125,12 @@ export const AboutUs = () => {
             {teamMembers.map((member) => (
               <div
                 key={member.id}
-                className="bg-gray-100  dark:text-white dark:bg-[#05132e] shadow rounded-lg p-6 text-center"
+                className="bg-gray-100  dark:text-white dark:bg-[#05132e] shadow rounded-lg p-6 flex flex-col items-center justify-center"
               >
-                <Image
-                  src={member.image}
-                  alt={`Team Member ${member.name}`}
-                  width={120}
-                  height={120}
-                  className="rounded-full mx-auto mb-4"
-                />
+                <Avatar className="size-20">
+                  <AvatarImage src={member.image} alt={member.name} />
+                  <AvatarFallback>{member.fallback}</AvatarFallback>
+                </Avatar>
                 <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-gray-500 dark:text-white">{member.role}</p>
               </div>

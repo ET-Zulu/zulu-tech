@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import { Card } from "@/components/ui/card";
 import { TestimonialType } from "@/lib/types";
+import Image from "next/image";
 
 const testimonials: TestimonialType[] = [
   {
@@ -69,10 +70,12 @@ export const Testimonials = () => {
               <Card className="p-6 h-full hover:shadow-lg transition-shadow duration-300 dark:bg-[#032157] dark:text-white">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
-                    <img
+                    <Image
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-full h-full object-cover"
+                      width={48}
+                      height={48}
+                      className="object-cover"
                     />
                   </div>
                   <div>
