@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { SuccessStory } from "@/lib/types";
+import { Button } from "../ui/button";
+import { MoveUpRight, View } from "lucide-react";
+import Link from "next/link";
 
 const successStories: SuccessStory[] = [
   {
@@ -11,7 +14,25 @@ const successStories: SuccessStory[] = [
       "We develop fully customized e-commerce applications that cater to your specific business needs. From small online stores to large marketplaces, we design and develop solutions that scale with your business growth. Cross-Platform Solutions: We create cross-platform e-commerce applications that provide a consistent shopping experience across web, iOS, and Android platforms. Our apps are designed to work smoothly on any device, ensuring accessibility and convenience for your customers. User Persona Integration:    ",
     image: "/images/e-com.png",
     liveUrl: "https://trendyboutique.com",
-    techStack: ["React", "Next.js", "TailwindCSS", "Node.js", "MongoDB"],
+    techStack: [
+      {
+        name: "TypeScript",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "React",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+      {
+        name: "Node.js",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      },
+
+      {
+        name: "Python",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      },
+    ],
   },
   {
     id: 3,
@@ -20,16 +41,26 @@ const successStories: SuccessStory[] = [
       "The CO2 Footprint application is a web platform built with a Solidity backend for storing analysis results, a React.js frontend for user interaction, and Python for running the LLM model to perform data analysis.",
     image: "/images/carbon.png",
     liveUrl: "https://techsolutions.com",
-    techStack: ["Vue.js", "Nuxt.js", "PostgreSQL", "AWS"],
-  },
-  {
-    id: 4,
-    title: "Brand Revitalization for Fresh Juice Co.",
-    description:
-      "This project involved a complete brand revitalization for Fresh Juice Co., including a new logo, packaging design, and website. Our approach focused on creating a vibrant and fresh aesthetic that reflects the health-conscious values of the brand.",
-    image: "/project4.png",
-    liveUrl: "https://freshjuice.com",
-    techStack: ["React", "Express", "MySQL", "Redux"],
+    techStack: [
+      {
+        name: "Django",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+      },
+
+      {
+        name: "PostgreSQL",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      },
+
+      {
+        name: "AWS",
+        url: "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      },
+      {
+        name: "Vue.js",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      },
+    ],
   },
 ];
 
@@ -60,7 +91,7 @@ export const Success = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-[#0b224d] rounded-lg p-6 shadow-lg"
+            className="bg-white dark:bg-[#0b224d] rounded-lg p-6 shadow-lg flex flex-col"
           >
             <div className="grid grid-cols-2 gap-4">
               {/* Project Screenshots */}
@@ -85,6 +116,9 @@ export const Success = () => {
                 Active Projects
               </p>
             </div>
+            <Button className="mx-auto mt-2 items-center flex justify-center">
+              View More <MoveUpRight size={40} />{" "}
+            </Button>
           </motion.div>
 
           <motion.div
@@ -98,17 +132,30 @@ export const Success = () => {
                 key={story.id}
                 className="p-4 hover:shadow-lg transition-shadow duration-300 dark:bg-[#05132e] dark:border-gray-400"
               >
-                <div className="flex max-sm:flex-col items-center gap-4">
-                  <div className=" bg-purple-100 p-8 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">💡</span>
+                <Link href={story.liveUrl}>
+                  <div className="flex max-sm:flex-col items-center gap-4">
+                    <div className=" bg-purple-100 p-8 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">💡</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">{story.title}</h4>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        {story.description}
+                      </p>
+                      <div className="flex mt-4 gap-1">
+                        {story.techStack.map((link, index) => (
+                          <div key={index} className="">
+                            <img
+                              src={link.url}
+                              className="text-lg h-8 w-14"
+                              alt={link.name}
+                            />
+                          </div>
+                        ))}{" "}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold">{story.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      {story.description}
-                    </p>
-                  </div>
-                </div>
+                </Link>
               </Card>
             ))}
           </motion.div>

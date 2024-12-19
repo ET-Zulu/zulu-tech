@@ -20,6 +20,9 @@ export interface SuccessStory {
   description: string;
   image: string;
   liveUrl: string;
-  techStack: string[];
+  techStack: {
+    name: string;
+    url: string;
+  }[];
   // details: string;
 }
