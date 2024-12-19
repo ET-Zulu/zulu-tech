@@ -31,17 +31,17 @@ const teamMembers = [
 const achievements = [
   {
     id: 1,
-    title: "10,000+",
+    title: "15+",
     description: "Happy Clients",
   },
   {
     id: 2,
-    title: "500+",
+    title: "20+",
     description: "Projects Delivered",
   },
   {
     id: 3,
-    title: "20+",
+    title: "5+",
     description: "Countries Served",
   },
 ];
@@ -52,7 +52,7 @@ export const AboutUs = () => {
     theme === "dark" ? "bg-gray-900 text-gray-100" : "bg-white text-gray-800";
 
   return (
-    <section className={`${bgColor} min-h-screen`}>
+    <section className={`${bgColor}  min-h-screen`}>
       {/* Hero Section */}
       <div
         className="relative w-full h-[500px] bg-[url(
