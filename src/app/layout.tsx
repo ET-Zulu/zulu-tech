@@ -23,6 +23,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Zulu Tech",
   description: "Zulu Tech Ethiopia",
+  icons:{
+    icon:"/logo.jpg",
+  }
 };
 
 export default function RootLayout({

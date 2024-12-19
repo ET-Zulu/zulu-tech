@@ -16,7 +16,7 @@ const HeroCustom = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            Turning Vision into Reality,
+            Turning Vision into Reality
           </motion.h1>
           <p className="text-lg md:text-xl mt-4">
             Achieving your project goals with precision and timely delivery.
