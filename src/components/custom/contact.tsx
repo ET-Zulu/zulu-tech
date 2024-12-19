@@ -17,7 +17,7 @@ type FormErrors = {
 };
 
 export default function ContactPage() {
-  const [state, handleSubmit] = useForm("mnnqkqjn");
+  const [state, handleSubmit] = useForm("mjkvqylb");
   const [showPopup, setShowPopup] = useState(false);
   const [formErrors, setFormErrors] = useState<FormErrors>({});
   const [loading, setLoading] = useState(false);
@@ -150,8 +150,9 @@ export default function ContactPage() {
                   <Image
                     src="/images/contact-us.avif"
                     alt="Contact illustration"
-                    fill
                     className="object-contain"
+                    width={400}
+                    height={400}
                   />
                 </div>
 
