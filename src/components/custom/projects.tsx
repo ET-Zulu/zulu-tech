@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import Hero from "@/app/projects/hero";
 
 const projects = [
   {
@@ -71,11 +72,12 @@ export const ProjectsPage = () => {
   return (
     <section className="min-h-screen dark:bg-[#05132e]">
       {/* Hero Section */}
-      <div className="relative w-full h-[400px] flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
+      {/* <div className="relative w-full h-[400px] flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
         <div
           className="absolute inset-0"
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0 80%)" }}
         ></div>
+
         <div className="relative z-10 text-center">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -94,7 +96,9 @@ export const ProjectsPage = () => {
             Selected success stories from our project portfolio
           </motion.p>
         </div>
-      </div>
+      </div> */}
+      <Hero />
+
 
       {/* Projects Grid */}
       <div className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
