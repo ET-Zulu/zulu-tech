@@ -48,7 +48,7 @@ const HeroCustom = () => {
           Trusted By 1000 clients all over the world
         </motion.p> */}
         <AnimatedLogoCloud />
-      </div>
+        </div>
     </section>
   );
 };

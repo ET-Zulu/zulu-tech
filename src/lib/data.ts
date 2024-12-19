@@ -163,6 +163,10 @@ export const navItems = [
     link: "/about",
   },
   {
+    name: "Projects",
+    link: "/projects",
+  },
+  {
     name: "Blog",
     link: "/blog",
   },
